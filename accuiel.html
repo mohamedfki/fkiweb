@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive personal portfolio website design tutorail</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<script src="script.js"></script>
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+</head>
+
+<body>
+
+<header >
+
+  <nav>
+    <div class="logo">Web</div>
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <ul>
+      <li><a class="active" href="accuiel.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="education.html">education</a></li>
+      <li><a href="formation.html">formation</a></li>
+      <li><a href="quiz.html">QUIZ</a></li>
+
+      <li><a href="contact.html">contacat</a></li>
+    </ul>
+  </nav>
+  <div class="content">
+
+<div class="a">
+  <h3>Salut a tous !</h3>
+    <h1 class="ml6">
+  <span class="text-wrapper">
+    <span class="letters">Je m'apelle Feki mohamed</span>
+  </span>
+</h1>
+ <p>J'ai créé ce site pour me présenter ainsi que mes études et experiences que j'ai prises dans ma vie, vous voullez  me contact.
+    </p>
+  </div>
+  <div class="aa">
+    <img src="profile.jpg"/>
+  </div>
+</div>
+    </header> 
+ 
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+ <div class="wrapper">
+      <div class="icon facebook">
+        <div class="tooltip">Facebook</div>
+        <a href="https://fr-fr.facebook.com/"><span><i class="fab fa-facebook-f"></i></span></a>
+      </div>
+
+      <div class="icon twitter">
+        <div class="tooltip">Twitter</div>
+        <a href="https://twitter.com/"><span><i class="fab fa-twitter"></i></span></a>
+      </div>
+      <div class="icon instagram">
+        <div class="tooltip">Instagram</div>
+       <a href="https://www.instagram.com/"> <span><i class="fab fa-instagram"></i></span></a>
+      </div>
+
+      <div class="icon github">
+        <div class="tooltip">Github</div>
+        <span><i class="fab fa-github"></i></span>
+      </div>
+
+      <div class="icon youtube">
+        <div class="tooltip">Youtube</div>
+       <a href="https://www.youtube.com/"> <span><i class="fab fa-youtube"></i></a></a></span>
+      </div>
+    </div>
+    <script>
+    var textWrapper = document.querySelector('.ml6 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml6 .letter',
+    translateY: ["1.1em", 0],
+    translateZ: 0,
+    duration: 750,
+    delay: (el, i) => 50 * i
+  }).add({
+    targets: '.ml6',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+    </script>
+</body>
+</html>
